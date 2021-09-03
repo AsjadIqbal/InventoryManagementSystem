@@ -26,14 +26,122 @@ This application can be used by any small to mid-sized stores to easily maintain
 - Users only need to enter the product code while making a sale and all the relevant details will be retrieved from the database automatically.
 - Maintains a time log of all the users using the application.
 
+## How to download and run the software
+
+#### Minimum Requirements: JDK or JRE version 16.
+
+1. Download and unzip the ZIP folder: [InventoryManagement.zip](InventoryManagement.zip)
+2. Download the [SQL dump file](SQL/InventoryDB.sql)
+3. Import the SQL dump file using MySQL Workbench to locally create the sample schema and tables associated with this software.
+4. After the inventory schema has been locally created, you can go ahead and run the JAR file (InventoryManagement.jar) included in the zip folder.
+5. Default credentials for the connection to MySQL database is:
+    - Username: root
+    - Password: root
+  
+    Incase your database uses a different username and password to connect, follow these steps:
+    1. Go to the `lib` folder in the zip file that you downloaded.
+    2. Open the XML source file `DBCredentials.xml`.
+    3. Simply change the values of the two `entry` tags with values `username` and `password` from "root" to whatever username and password you are using. (Ln 12 and 13)
+        ```xml
+          <properties>
+          <comment>Credentials for the database.</comment>
+            <entry key="username">root</entry>
+            <entry key="password">root</entry>
+          </properties>
+        ```
+6. Once these credentials match, the JAR file should execute without any issues provided that you have the minimum JRE.
+7. You can log into the application using Username: `root` and Password: `root`.
+
+### Note:
+
+All the project dependencies are available in the [`lib`](lib/) directory.
+
+***
+
 
 ## Application Preview
 
 ### Login Page
 
 The login page takes in the credentials entered by the user and verifies with the database.
+
 ![loginpage](screenshots/login.png)
 
 ### Dashboard/Welcome Page
 
+The landing page of the application after a successful login.
 
+![welcome](screenshots/welcome.png)
+
+### Products
+
+The products section allows the user to add, edit and delete products from the store's inventory.
+
+![products](screenshots/products.png)
+
+### Current Stock
+
+This section allows the user to check the availability of every item.
+
+![stock](screenshots/stock.png)
+
+### Suppliers
+
+Here, the user can manage and manipulate the record of all the suppliers associated with the store.
+
+![suppliers](screenshots/suppliers.png)
+
+### Customers
+
+Allows user to add new customers or update/delete existing customers in the database.
+
+![customers](screenshots/customers.png)
+
+### Sales
+
+This section is where users can sell a product and manage all the sales transactions. 
+The user only needs to enter the customer and product code and the software will handle the rest, showing all the necessary details like available stock and selling price of the product. 
+
+![sales](screenshots/sales.png)
+
+### Purchase
+
+This section is where users can view purchase logs and enter new purchase transactions. Similar to the sales section, this section only requires the user to enter the product code and the details that are already available in the database will immediately be displayed in the respective spaces.
+
+![purchase](screenshots/purchase.png)
+
+### Users
+
+This section is only available to **ADMINISTRATORS**. It allows them to view, add and delete any users.
+
+![users](screenshots/users.png)
+
+### User Logs
+
+Stores and shows the administrator a log of all the users that have previously logged in, including their login time and logout time.
+
+![logs](screenshots/logs.png)
+
+***
+
+## Technologies Used
+
+The following are the technologies that have been used in the development of this project. All of them are free to use.
+  - JetBrains IntelliJ IDE
+  - Apache NetBeans IDE (for the GUI designer)
+  - MySQL Server and Workbench
+  - JDK 16
+
+## ER Diagram
+
+The ER diagram for the sample schema that has been used in the application.
+
+[erdiag](screenshots/ERDiagram.png)
+
+## Source Code
+
+Click [here](src/com/inventory/) to skip directly to the source code.
+
+## Work-in-Progress
+
+This project is a work in progress and more features are yet to be added with new technologies. 
