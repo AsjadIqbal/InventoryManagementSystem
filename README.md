@@ -136,7 +136,7 @@ The following are the technologies that have been used in the development of thi
 
 The ER diagram for the sample schema that has been used in the application.
 
-[erdiag](screenshots/ERDiagram.png)
+![erdiag](screenshots/ERDiagram.png)
 
 ## Source Code
 
