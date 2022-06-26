@@ -66,6 +66,12 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Password:");
 
+        passText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passTextActionPerformed(evt);
+            }
+        });
+
         jLabel3.setFont(new java.awt.Font("Poor Richard", 1, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("STORE  INVENTORY");
@@ -182,8 +188,12 @@ public class LoginPage extends javax.swing.JFrame {
         passText.setText("");
     }//GEN-LAST:event_clearButtonActionPerformed
 
-    
+    private void passTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passTextActionPerformed
+        // TODO add your handling code here:
+        loginButtonActionPerformed(evt);
+    }//GEN-LAST:event_passTextActionPerformed
 
+    
     // Driver Method
     // **APPLICATION STARTS EXECUTION HERE**
     public static void main(String[] args) {
